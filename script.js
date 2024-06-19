@@ -76,7 +76,10 @@ obj.forEach((val)=> {
     linkElement.style.setProperty('--background-color', `${val["color"]}`);
     linkElement.addEventListener("click",(e)=>{
         console.log(e.target.className)
-        window.open(`${val["link"]}`,"_blank") 
+        setTimeout(function() {
+                 window.open(`${val["link"]}`,"_blank") 
+            }, 1000); 
+       
     })
 })
 
