@@ -79,7 +79,7 @@ obj.forEach((val)=> {
         
         setTimeout(function() {
             window.open(`${val["link"]}`,"_blank") 
-        }, 500); 
+        }, 1000); 
     })
 })
 
