@@ -45,7 +45,7 @@ let obj = [
     {
         "name" : "Mail",
         "icon" : "ri-mail-line",
-        "color" : "#7289da",
+        "color" : "#EA4335",
         "link" : "mailto:dheerajray2003@gmail.com?subject=Hello%20Dheeraj&body=I%20would%20like%20to%20contact%20you."
     }
 ]
