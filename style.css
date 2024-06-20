@@ -84,7 +84,8 @@ html , body{
     padding: 10px;
     font-family: "Signika", sans-serif;
     color:rgb(48, 15, 15);
-     font-weight: 500;
+    font-weight: 500;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
