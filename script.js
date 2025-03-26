@@ -47,6 +47,12 @@ let obj = [
         "icon" : "ri-mail-line",
         "color" : "#EA4335",
         "link" : "mailto:dheerajray2003@gmail.com?subject=Hello%20Dheeraj&body=I%20would%20like%20to%20contact%20you."
+    },
+      {
+        "name" : "Share",
+        "icon" : "ri-share-line",
+        "color" : "#003092",
+        "link" : "https://connect-with-dheeraj.vercel.app"
     }
 ]
 
