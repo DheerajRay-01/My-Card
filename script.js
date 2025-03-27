@@ -48,12 +48,12 @@ let obj = [
         "color" : "#EA4335",
         "link" : "mailto:dheerajray2003@gmail.com?subject=Hello%20Dheeraj&body=I%20would%20like%20to%20contact%20you."
     },
-    //   {
-    //     "name" : "Share",
-    //     "icon" : "ri-share-line",
-    //     "color" : "#003092",
-    //     "link" : "https://connect-with-dheeraj.vercel.app"
-    // }
+      {
+        "name" : "Share",
+        "icon" : "ri-share-line",
+        "color" : "#003092",
+        "link" : "https://connect-with-dheeraj.vercel.app"
+    }
 ]
 
 
@@ -80,13 +80,28 @@ obj.forEach((val)=> {
 obj.forEach((val)=> {
     let linkElement = document.querySelector(`.link-${val["name"]}`);
     linkElement.style.setProperty('--background-color', `${val["color"]}`);
-    linkElement.addEventListener("click",(e)=>{
-        console.log(e.target.className)
-        setTimeout(function() {
-                 window.open(`${val["link"]}`,"_blank") 
-            }, 1000); 
-       
-    })
+    if (val["name"] != "Share") {
+        linkElement.addEventListener("click",(e)=>{
+            setTimeout(function() {
+                     window.open(`${val["link"]}`,"_blank") 
+                }, 1000); 
+           
+        })
+    } else {
+        linkElement.addEventListener("click",(e)=>{
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    text: "Check out this page!",
+                    url: val["link"]
+                })
+                .then(() => console.log("Shared successfully"))
+                .catch((error) => console.log("Error sharing:", error));
+            } else {
+                alert("Your browser doesn't support the Web Share API.");
+            }
+        })
+    }
 })
 
 
