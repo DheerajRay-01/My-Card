@@ -34,7 +34,7 @@ let obj = [
         "name" : "Telegram",
         "icon" : "ri-telegram-fill",
         "color" : "#24A1DE",
-        "link" : "https://t.me/mrdheeraj2003"
+        "link" : "https://t.me/dheerajray"
     },
     {
         "name" : "Discord",
